@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>javascript函数</title>
+    <script>
+        function myFunction() {
+            alert("HI HAAH");
+        }
+    </script>
+</head>
+<body>
+<h1>函数是由事件驱动的或者当它被调用时执行的可重复使用的代码块。</h1>
+<button onclick="myFunction()">点击</button>
+<h1>点击按钮，来调用带参数的函数</h1>
+<button onclick="no1('conky','IT')">点击</button>
+<script>
+    function no1(name,job) {
+        alert("welcome " + name + ", the " +job);
+
+    }
+
+
+</script>
+<h1>带有返回值的函数</h1>
+<p>本例调用的函数会执行一个计算，然后返回结果：</p>
+<p id="demo"></p>
+<script>
+   function no2(a,b) {
+       return a*b
+   }
+    document.getElementById("demo").innerHTML=no2(4,3);
+
+</script>
+
+</body>
+</html>
