@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js变量</title>
+</head>
+<body>
+<h1>变量是储存信息的容器</h1>
+<script>
+    var x=2;
+    var y=3;
+    var z=x+y;
+    document.write(x + "<br>");
+    document.write(y + "<br>");
+    document.write(z + "<br>");
+    </script>
+    <h1>js数据类型</h1>
+<p>当您向变量赋的值是数值时，不要使用引号。如果您用引号包围数值，该值会被作为文本来处理。</p>
+    <script>
+    var hight=173;
+    var name="conky";
+    var weight="53kg"
+    document.write(hight + "<br>");
+    document.write(name + "<br>");
+    document.write(weight + "<br>");
+
+</script>
+<h1>声明变量</h1>
+<button onclick="myFunction()">点击</button>
+<p id="demo"></p>
+<script>
+    function myFunction() {
+        var carname="conky"
+        document.getElementById("demo").innerHTML=carname;
+    }
+
+
+</script>
+<h1>js算数</h1>
+<p>设y=5, x=y+8.求和？</p>
+<button onclick="myFunction()">点击</button>
+<p id="demo2"></p>
+<script>
+    function myFunction()
+    {
+        var y=5;
+        var x=y+8;
+        var demop=document.getElementById("demo2")
+        demop.innerHTML="x=" + x;
+
+    }
+</script>
+
+</body>
+</html>
