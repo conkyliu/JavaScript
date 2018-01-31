@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js输出</title>
+</head>
+
+
+
+<body>
+<h1>操作HTML元素</h1>
+<p id="demo1">输出的内容</p>
+<script>
+    document.getElementById("demo1").innerHTML="JS输出的内容";
+</script>
+<h1>写到文档输出</h1>
+<script>
+    document.write("<p>js输出的内容</p>");
+</script>
+<h1>警告框</h1>
+<button onclick="myFunction()">点击</button>
+<script>
+    function myFunction() {
+        document.write("hello");
+
+    }
+</script>
+</body>
+</html>
