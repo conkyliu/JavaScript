@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js语句</title>
+</head>
+<body>
+<h1>浏览器会按照编写顺序来执行每条语句.本例将操作两个 HTML 元素：</h1>
+<p id="demo1">duanluo1</p>
+<div id="demo2">duanluo2</div>
+<script>
+    document.getElementById("demo1").innerHTML="hi";
+    document.getElementById("demo2").innerHTML="hello";d
+</script>
+<h1>下面的例子将运行可操作两个 HTML 元素的函数</h1>
+<p id="demo3">halou</p>
+<div id="demo4">nihao</div>
+<button onclick="myFunction()">点击</button>
+<script>
+    function myFunction()
+    {
+        document.getElementById("demo3").innerHTML="哈喽哈喽";
+        document.getElementById("demo4").innerHTML="你好你好";
+    }
+
+</script>
+<p>点击时，两个元素都会改变</p>
+</body>
+</html>
