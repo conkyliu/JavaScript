@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js if...else</title>
+</head>
+<body>
+<h1>if 语句 - 只有当指定条件为 true 时，使用该语句来执行代码</h1>
+<button onclick="no1()">点击</button>
+<p id="demo1"></p>
+<script>
+    function no1() {
+        var x="";
+        var time=new Date() .getHours();
+        if (time<24)
+        {
+            x="Good Day";
+        }
+        document.getElementById("demo1").innerHTML=x;
+    }
+
+</script>
+<h1>请使用 if....else 语句在条件为 true 时执行代码，在条件为 false 时执行其他代码。</h1>
+<button onclick="no2()">点击</button>
+<p id="demo2"></p>
+<script>
+    function no2()
+    {
+    var x="";
+    var time=new Date().getHours();
+
+        if (time<20)
+        {
+            x = "Good Day";
+        }
+    else
+        {
+           x = "good evening";
+        }
+        document.getElementById("demo2").innerHTML=x;
+    }
+</script>
+<h1>使用 if....else if...else 语句来选择多个代码块之一来执行。</h1>
+<button onclick="no3()">点击</button>
+<p id="demo3"></p>
+<script>
+    function no3() {
+        var x = "";
+        var time=new Date().getHours();
+        if (time < 10) {
+            x = "good morning";
+        }
+        else if (time < 18) {
+            x = "good afternoon";
+        }
+        else
+        {
+            x = "good evening";
+        }
+        document.getElementById("demo3").innerHTML=x;
+    }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
