@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js For</title>
+</head>
+<body>
+<h1>循环可以将代码块执行指定的次数。</h1>
+<script>
+    cars=["1","2","3","4"];
+    for (var i=0;i<cars.length;i++)
+    {
+        document.write(cars[i] + "<br>");
+    }
+
+</script>
+<h1>下面是 for 循环的语法：</h1>
+<button onclick="forone()">点击</button>
+<p id="demo-for"></p>
+<script>
+function forone() {
+    var x="";
+    for (var i=0;i<5;i++)
+    {
+        x= x + "数字是" + i + "<br>";
+    }
+    document.getElementById("demo-for").innerHTML=x;
+}
+</script>
+<h1>简化语句1和3:</h1>
+<script>
+    var cars=["1","2","3","4"];
+    var i=0;len=cars.length;
+    for (;i<len;) {
+        document.write(cars[i] + "<br>");
+        i++
+    }
+</script>
+
+<h1>JavaScript for/in 语句循环遍历对象的属性：</h1>
+<button onclick="forin()">点击</button>
+<p id="demo-for-in"></p>
+<script>
+    function forin() {
+        var x;
+        var txt="";
+        var person={fname:"Conky",lname:"liu",age:"18"};
+        for (x in person)
+        {
+            txt=txt + person[x];
+        }
+        document.getElementById("demo-for-in").innerHTML=txt;
+    }
+
+</script>
+
+</body>
+</html>
