@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js while</title>
+</head>
+<body>
+<h1>只要指定条件为 true，循环就可以一直执行代码。</h1>
+<button onclick="whileone()">点击</button>
+<p id="while-one"></p>
+<script>
+    function whileone() {
+
+        var x="",i=0;
+        while (i<5)
+        {
+            x=x + "数字是" +i +"<br>";
+            i++;
+
+
+        }
+        document.getElementById("while-one").innerHTML=x;
+    }
+</script>
+<h1>do/while循环:</h1>
+<button onclick="dowhile()">点击</button>
+<p id="do-while"></p>
+<script>
+    function dowhile() {
+        var x="",i=0;
+        do
+        {
+            x= x + "数字是" + i + "<br>";
+            i++;
+        }
+        while (i<5)
+        document.getElementById("do-while").innerHTML=x;
+
+
+    }
+
+</script>
+
+
+
+
+
+</body>
+</html>
