@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js break</title>
+</head>
+<body>
+<h1>break 语句用于跳出循环。</h1>
+<button onclick="breakOne()">点击</button>
+<p id="demoOne"></p>
+    <script>
+        function breakOne()
+        {
+            var i = 0, x = "";
+            for (i = 0; i < 10; i++)
+            {
+                if (i == 3) //只有一行代码可以省略花括号
+                {
+                    break;
+                }
+                x = x + "数字是:" + i + "<br>";
+            }
+            document.getElementById("demoOne").innerHTML = x;
+
+        }
+    </script>
+<h1>continue 用于跳过循环中的一个迭代</h1>
+<button onclick="continueOne()">点击</button>
+<p id="demoTwo"></p>
+<script>
+    function continueOne()
+    {
+    var x="",i=0;
+        {
+            for (i=0;i<10;i++)
+            {
+                if (i==4) continue;
+
+              x= x + "数字是:" + i + "<br>";
+
+            }
+        }
+
+     document.getElementById("demoTwo").innerHTML=x;
+
+    }
+
+
+
+</script>
+<h1>通过标签引用，break 语句可用于跳出任何 JavaScript 代码块：</h1>
+<script>
+    cars=["A","B","C","D"];
+    list:
+    {
+        document.write(cars[0] + "<br>");
+        document.write(cars[1] + "<br>");
+        document.write(cars[2] + "<br>");
+        break list;
+        document.write(cars[3] + "<br>");
+        document.write(cars[4] + "<br>");
+
+
+
+
+    }
+</script>
+
+
+</body>
+</html>
