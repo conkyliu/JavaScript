@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript 错误 - Throw、Try 和 Catch</title>
+    <script>
+        var txt="";
+        function message()
+        {
+            try
+            {
+                aaalert("hello");
+            }
+            catch(err)
+            {
+                txt="本文有一个错误.  \n\n";
+                txt+="错误描述:" + err.message +"\n\n";
+                txt+="点击确认继续. \n\n";
+                alert(txt);
+            }
+        }
+    </script>
+    <script>
+        function throwOne()
+        {
+           try
+           {
+            var x=document.getElementById("demo").value;
+            if(x=="")             throw "值为空";
+            if(x=isNaN(x))        throw "不是数字";
+            if(x>10)              throw "太大";
+            if(x<5)               throw "太小";
+           }
+           catch(err)
+           {
+               var y=document.getElementById("mess");
+               y.innerHTML="错误:" + err + ".";
+           }
+        }
+    </script>
+</head>
+<body>
+<h1>在下面的例子中，我们故意在 try 块的代码中写了一个错字。
+
+    catch 块会捕捉到 try 块中的错误，并执行代码来处理它。</h1>
+<input type="button" value="查看" onclick="message()" />
+<h1>本例检测输入变量的值。如果值是错误的，会抛出一个异常（错误）。catch 会捕捉到这个错误，并显示一段自定义的错误消息：</h1>
+<p>请输入5-10的数字:</p>
+<input id=demo type="txt">
+<button onclick="throwOne()">测试输入值</button>
+<p id="mess"></p>
+</body>
+</html>
