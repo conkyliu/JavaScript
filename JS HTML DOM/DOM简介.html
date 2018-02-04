@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM 简介</title>
+</head>
+<body>
+<h1>通过 id 查找 HTML 元素:在 DOM 中查找 HTML 元素的最简单的方法，是通过使用元素的 id。</h1>
+<p id="intro">你好!</p>
+<p>本例演示<b>getElementById</b>方法!</p>
+<script>
+    x=document.getElementById("intro");
+    document.write('<p>id="intro"的段落文本是: ' + x.innerHTML +'</p> ');
+
+
+</script>
+<h1>通过标签名查找 HTML 元素:本例查找 id="main" 的元素，然后查找 "main" 中的所有 <p> 元素：</h1>
+<div id="main">
+    <p>你好啊!</p>
+    <p>本例演示<b>getElementByTagName</b>方法.</p>
+</div>
+<script>
+    var x=document.getElementById("main");
+    var y=x.getElementsByTagName("p");
+    document.write('id为"main"的div中的第一段文本是: '+ y[0].innerHTML);//0为数组中的第一个
+
+</script>
+
+
+
+</body>
+</html>
