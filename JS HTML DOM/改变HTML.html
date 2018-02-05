@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>改变HTML </title>
+</head>
+<body
+>
+<h1>改变 HTML 输出流:</h1>
+<script>
+    document.write(Date());
+
+
+</script>
+<h1>改变 HTML 内容:</h1>
+<p id="demo1">还没改变</p>
+<script>
+    var x=document.getElementById("demo1");
+    x.innerHTML="改变之后的内容";
+
+
+</script>
+<h1>改变 HTML 属性:</h1>
+<a  id="demo2" href="//www.baidu.com" target="_blank" >百度</a>
+<script>
+    document.getElementById("demo2").href="//www.google.com" ;
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
