@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js 对象</title>
+</head>
+<body>
+<h1>创建 JavaScript 对象:</h1>
+<script>
+    person=new Object();
+    person.fname="conky";
+    person.lname="liu";
+    person.age="18";
+    document.write(person.fname  + " is " +person.age + " years old")
+</script>
+<p>简写:</p>
+<script>
+    person=
+        {fname:"conky",lname:"liu",age:"18"}
+document.write(person.fname + " is " + person.age + " years old")
+</script>
+<h1>本例使用函数来构造对象:</h1>
+<script>
+    function person(fname,lname,age) {
+        this.fname=fname;
+        this.lname=lname;
+        this.age=age;
+    }
+    my=new person("conky","liu","18");
+    document.write(my.fname + " is " + my.age + " years old")
+</script>
+<h1>把方法添加到 JavaScript 对象:</h1>
+<script>
+    function person(fname,lname,age)
+    {
+        this.fname = fname;
+        this.lname=name;
+        this.age=age;
+        this.changeName = changeName;
+
+        function changeName(name) {
+            this.fname=name;
+        }
+    }
+    my=new person("conky","liu","18");
+    my.changeName("刘冠琦");
+    document.write(my.fname);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
