@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js Date</title>
+    <script type="text/javascript">
+    function starTime()
+    {
+    var today=new Date();
+    var h=today.getHours();
+    var m=today.getMinutes();
+    var s=today.getSeconds();
+    m=checkTime(m);
+    s=checkTime(s); //当数字小于10加个0
+    document.getElementById('txt').innerHTML = h+":"+m+":"+s;
+    t=setTimeout('starTime()', 500);
+    }
+    function checkTime(i)
+    {
+    if (i<10)
+    {i="0" +i }
+        return i
+
+
+    }
+    </script>
+</head>
+<body>
+<h1>返回当日的日期和时间</h1>
+<script>
+    document.write(Date())
+</script>
+<h1>getTime() 返回从 1970 年 1 月 1 日至今的毫秒数。</h1>
+<script>
+    var d= new Date();
+    document.write("从 1970/01/01 至今的毫秒数: " + d.getTime() + "毫秒")
+
+</script>
+<h1>使用 setFullYear() 设置具体的日期。</h1>
+<script>
+    var d= new Date();
+    d.setFullYear(1989,10,2)
+    document.write(d);
+</script>
+<h1>使用 toUTCString() 将当日的日期（根据 UTC）转换为字符串。</h1>
+<script>
+    var d=new Date();
+    document.write(d.toUTCString())
+
+
+</script>
+<h1>使用 getDay() 和数组来显示星期，而不仅仅是数字。</h1>
+<script>
+    var d= new Date();
+    var weekday=["星期日","星期一","星期二","星期三","星期四","星期五","星期六"]
+    document.write("今天是" + weekday[d.getDay()])
+</script>
+<h1>在网页上显示一个钟表。</h1>
+<p id="demo"></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
