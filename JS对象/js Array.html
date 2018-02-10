@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Array</title>
+</head>
+<body>
+<h1>创建数组，为其赋值，然后输出这些值。</h1>
+<script>
+    var mycars= new Array()
+    mycars[0]="aa"
+    mycars[1]="bb"
+    mycars[2]="cc"
+    for (i=0;i<mycars.length;i++)
+    {
+        document.write(mycars[i] + "<br/>")
+    }
+</script>
+<h1>使用 for...in 声明来循环输出数组中的元素。</h1>
+<script>
+    var x
+    var mycar=["aa","bb","cc"]
+    for (x in mycar)
+    {
+        document.write(mycar[x] + "<br/>")
+    }
+
+</script>
+<h1>使用 concat() 方法来合并两个数组。</h1>
+<script>
+ var arr=["aa","bb","cc"]
+ var arr2=["AA","BB","CC"]
+    document.write(arr.concat(arr2))
+</script>
+<h1>使用 join() 方法将数组的所有元素组成一个字符串。</h1>
+<script>
+    var arr=["aa","bb","cc"]
+    document.write(arr.join("!") + "<br/>")
+    document.write(arr.join("?"))
+
+</script>
+<h1>使用 sort() 方法从字面上对数组进行排序。</h1>
+<script>
+    var arr=["cc","ff","aa","gg"]
+    document.write(arr + "<br/>")
+    document.write(arr.sort())
+</script>
+<h1>使用 sort() 方法从数值上对数组进行排序。</h1>
+<script>
+    var arr=["12","18","34","56","01"]
+document.write(arr +"<br/>")
+document.write(arr.sort())
+</script>
+
+
+
+
+
+</body>
+</html>
