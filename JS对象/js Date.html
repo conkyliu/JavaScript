@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>js Date</title>
-    <script type="text/javascript">
+    <script>
     function starTime()
     {
     var today=new Date();
@@ -25,7 +25,7 @@
     }
     </script>
 </head>
-<body>
+<body onload="starTime()">
 <h1>返回当日的日期和时间</h1>
 <script>
     document.write(Date())
@@ -56,7 +56,7 @@
     document.write("今天是" + weekday[d.getDay()])
 </script>
 <h1>在网页上显示一个钟表。</h1>
-<p id="demo"></p>
+<p id="txt"></p>
 
 
 
