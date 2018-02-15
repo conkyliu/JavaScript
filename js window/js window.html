@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BOM</title>
+</head>
+<body>
+<h1>window尺寸</h1>
+<p id="demo"></p>
+<script>
+var w=window.innerWidth
+    || document.documentElement.clientWidth
+    || document.body.clientWidth;
+var h=window.innerHeight
+    || document.documentElement.clientHeight
+    || document.body.clientHeight;
+x=document.getElementById("demo");
+x.innerHTML="浏览器的内部窗口宽度:" + w +",高度:"+h
+
+
+
+</script>
+<h1>Window Screen 可用宽度</h1>
+<script>
+document.write("可用宽度:" + screen.availWidth);
+</script>
+<h1>Window Screen 可用高度</h1>
+<script>
+    document.write("可用高度:" +screen.availHeight );
+</script>
+<h1>Window Location Assign</h1>
+<p>location.assign() 方法加载新的文档。</p>
+<input type="button" value="加载新文档" onclick="newDoc()">
+<script>
+    function newDoc() {
+        window.location.assign("//www.baidu.com")
+    }
+
+
+
+</script>
+<h1>Window History</h1>
+<script>
+    function goBack() {
+        window.history.back()
+    }
+</script>
+<input type="button" value="后退" onclick="goBack()">
+<script>
+    function goForward() {
+        window.history.forward()
+    }
+</script>
+<input type="button" value="前进" onclick="goForward ">
+<h1>Window Navigator</h1>
+<div id="ex1">
+<script>
+    txt="<p>Brower CodeName:" +navigator.appCodeName+ "</p>"
+    txt+="<p>Brower Name:" +navigator.appName+"</p>"
+    txt+="<p>Brower Version:" +navigator.appVersion +"</p>"
+    txt+="<p>Cookies Enbled:" +navigator.cookiesEnbled+"</p>"
+    txt+="<p>PlatForm:"+navigator.platform+"</p>"
+    txt+="<p>User-agent header:" +navigator.userAgent+"</p>"
+    txt+="<p>User-agent language:" +navigator.systemLanguage+"</p>"
+
+    document.getElementById("ex1").innerHTML=txt;
+
+
+
+</script>
+
+</div>
+<h1>JavaScript 消息框</h1>
+<p>警告框</p>
+<script>
+    function disp_alert(){
+        alert("警告警告!!");
+    }
+
+
+</script>
+<input type="button" value="显示警告框" onclick="disp_alert()"/>
+<p>带有折行的警告框</p>
+<script>
+    function dis_alert() {
+        alert("警告!" + '\n' + "你太帅");
+    }
+
+</script>
+<input type="button" value="显示警告框" onclick="dis_alert()"/>
+<p>确认框</p>
+<script>
+    function show_confirm() {
+        var r=confirm("请点击")
+        if (r==true)
+        {
+            alert("ok")
+        }
+        else{
+            alert("??")
+        }
+
+    }
+
+
+</script>
+<input type="button" value="确认框" onclick="show_confirm()"/>
+<p>提示框</p>
+<script>
+    function disp_prompt() {
+        var name = prompt("请输入你的名字", "Conky")
+        if (name != null && name != "") {
+            document.write("你好!" + name + ",今天过的怎么样")
+        }
+    }
+</script>
+<input type="button" value="提示框" onclick="disp_prompt()"/>
+
+
+
+
+
+
+</body>
+</html>
